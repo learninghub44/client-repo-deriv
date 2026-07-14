@@ -3,7 +3,7 @@ import { DBOT_TABS } from '@/constants/bot-contents';
 import { useStore } from '@/hooks/useStore';
 import './dashboard-hero.scss';
 
-const TYPING_PHRASES = ['Hello Traders', 'Hello Risk Managers', 'Welcome Back'];
+const TYPING_PHRASES = ['Hello Traders', 'Hello Chris Tech', 'Welcome Back'];
 const TYPING_SPEED = 80;
 const ERASE_SPEED = 40;
 const PAUSE_AFTER_TYPE = 1800;
@@ -176,7 +176,7 @@ const TESTIMONIALS = [
     {
         id: 5,
         stars: 5,
-        quote: '"Importing my XML strategy was seamless. RiskManagers just works."',
+        quote: '"Importing my XML strategy was seamless. Chris Tech just works."',
         name: 'Mei L.',
         role: 'Load Bot user',
         initial: 'M',

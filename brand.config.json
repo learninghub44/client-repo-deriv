@@ -1,11 +1,11 @@
 {
-    "brand_name": "RiskManagers",
-    "brand_domain": "riskmanagers.site",
+    "brand_name": "Chris Tech",
+    "brand_domain": "client-repo-deriv.site",
     "brand_hostname": {
-        "staging": "riskmanagers.site",
-        "production": "riskmanagers.site"
+        "staging": "client-repo-deriv.site",
+        "production": "client-repo-deriv.site"
     },
-    "domain_name": "riskmanagers.site",
+    "domain_name": "client-repo-deriv.site",
     "colors": {
         "primary": "#3b82f6",
         "secondary": "#64748b",
@@ -58,14 +58,14 @@
         "css_variable_prefix": "--brand"
     },
     "platform": {
-        "name": "Trading Bot",
+        "name": "Chris Tech",
         "logo": {
             "type": "component",
             "component_name": "BrandLogo",
-            "alt_text": "Trading Bot",
+            "alt_text": "Chris Tech",
             "link_url": "/",
             "show_text": false,
-            "text": "Trading Bot"
+            "text": "Chris Tech"
         },
         "footer": {
             "enable_language_settings": false,
@@ -73,10 +73,10 @@
         },
         "hostname": {
             "production": {
-                "com": "riskmanagers.site"
+                "com": "client-repo-deriv.site"
             },
             "staging": {
-                "com": "riskmanagers.site"
+                "com": "client-repo-deriv.site"
             }
         },
         "auth2_url": {
