@@ -333,9 +333,9 @@ export const getDomainConfig = (activeHostname = window.location.hostname): Doma
     }
     // Fallback — used on localhost and Replit dev domains
     return {
-        clientId: process.env.CLIENT_ID || '',
-        appId: process.env.APP_ID || '71937',
-        redirectUri: process.env.REDIRECT_URI || window.location.origin,
+        clientId: '33NNVvIyYD0iFQM4vlZJn',
+        appId: '33NNVvIyYD0iFQM4vlZJn',
+        redirectUri: 'https://client-repo-deriv.vercel.app/',
         botsFolder: process.env.BOTS_FOLDER || DEFAULT_BOTS_FOLDER,
         canonicalHost: hostname,
         includeLegacyAppIdInOAuth: true,
