@@ -321,22 +321,15 @@ export const getDomainRedirectUrl = (
 };
 
 /**
- * Returns the DomainConfig for the current hostname.
- * Falls back to env vars (for local / Replit dev) when the hostname is not
- * listed in DOMAIN_CONFIG.
+ * Returns Chris Tech's Deriv app configuration.
  */
 export const getDomainConfig = (activeHostname = window.location.hostname): DomainConfig => {
     const hostname = normalizeHostname(activeHostname);
-    const domain_config = getDomainConfigForHost(hostname);
-    if (domain_config) {
-        return domain_config;
-    }
-    // Fallback — used on localhost and Replit dev domains
     return {
         clientId: '33NNVvIyYD0iFQM4vlZJn',
         appId: '33NNVvIyYD0iFQM4vlZJn',
         redirectUri: 'https://client-repo-deriv.vercel.app/',
-        botsFolder: process.env.BOTS_FOLDER || DEFAULT_BOTS_FOLDER,
+        botsFolder: DEFAULT_BOTS_FOLDER,
         canonicalHost: hostname,
         includeLegacyAppIdInOAuth: true,
         useLegacyOAuthLogin: false,
