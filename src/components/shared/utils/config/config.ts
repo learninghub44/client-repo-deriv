@@ -326,9 +326,9 @@ export const getDomainRedirectUrl = (
 export const getDomainConfig = (activeHostname = window.location.hostname): DomainConfig => {
     const hostname = normalizeHostname(activeHostname);
     return {
-        clientId: '33NNVvIyYD0iFQM4vlZJn',
-        appId: '33NNVvIyYD0iFQM4vlZJn',
-        redirectUri: 'https://client-repo-deriv.vercel.app/',
+        clientId: '34t5yz3wDsbeZf9IAbFNV',
+        appId: '34t5yz3wDsbeZf9IAbFNV',
+        redirectUri: 'https://techhub.christech.co.ke/callback',
         botsFolder: DEFAULT_BOTS_FOLDER,
         canonicalHost: hostname,
         includeLegacyAppIdInOAuth: true,

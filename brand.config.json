@@ -1,11 +1,11 @@
 {
     "brand_name": "Chris Tech",
-    "brand_domain": "client-repo-deriv.site",
+    "brand_domain": "techhub.christech.co.ke",
     "brand_hostname": {
-        "staging": "client-repo-deriv.site",
-        "production": "client-repo-deriv.site"
+        "staging": "techhub.christech.co.ke",
+        "production": "techhub.christech.co.ke"
     },
-    "domain_name": "client-repo-deriv.site",
+    "domain_name": "techhub.christech.co.ke",
     "colors": {
         "primary": "#3b82f6",
         "secondary": "#64748b",
@@ -73,10 +73,10 @@
         },
         "hostname": {
             "production": {
-                "com": "client-repo-deriv.site"
+                "com": "techhub.christech.co.ke"
             },
             "staging": {
-                "com": "client-repo-deriv.site"
+                "com": "techhub.christech.co.ke"
             }
         },
         "auth2_url": {

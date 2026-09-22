@@ -13,6 +13,10 @@ export interface DomainLoaderConfig {
     fallingSymbols: string[];
     duration: number;
     messages: string[];
+    /** Optional full-bleed background image for the boot-screen loader. Falls back to a generated CSS scene when omitted. */
+    backgroundImage?: string;
+    /** Label shown next to the progress percentage, e.g. "Boot sequence". */
+    bootLabel?: string;
 }
 
 const DEFAULT_MESSAGES = [
@@ -154,6 +158,15 @@ export const domainLoaderConfig: Record<string, DomainLoaderConfig> = {
         backgroundColor: '#030712',
     }),
     localhost: createLoaderConfig('localhost', 'Dev Trading Platform', LOCALHOST_LOADER_COLORS, 'Testing Environment'),
+    'techhub.christech.co.ke': {
+        ...createLoaderConfig('techhub.christech.co.ke', 'Techhub', {
+            primaryColor: '#3b82f6',
+            secondaryColor: '#8b5cf6',
+            accentColor: '#ffffff',
+            backgroundColor: '#05060a',
+        }, 'Techhub Trading Workspace'),
+        bootLabel: 'Boot sequence',
+    },
 };
 
 export const defaultLoaderConfig: DomainLoaderConfig = {
