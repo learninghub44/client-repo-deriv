@@ -328,7 +328,7 @@ export const getDomainConfig = (activeHostname = window.location.hostname): Doma
     return {
         clientId: '34t5yz3wDsbeZf9IAbFNV',
         appId: '34t5yz3wDsbeZf9IAbFNV',
-        redirectUri: 'https://techhub.christech.co.ke/callback',
+        redirectUri: 'https://tradehub.christech.co.ke/callback',
         botsFolder: DEFAULT_BOTS_FOLDER,
         canonicalHost: hostname,
         includeLegacyAppIdInOAuth: true,

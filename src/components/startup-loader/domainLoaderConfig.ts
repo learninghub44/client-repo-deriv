@@ -158,8 +158,8 @@ export const domainLoaderConfig: Record<string, DomainLoaderConfig> = {
         backgroundColor: '#030712',
     }),
     localhost: createLoaderConfig('localhost', 'Dev Trading Platform', LOCALHOST_LOADER_COLORS, 'Testing Environment'),
-    'techhub.christech.co.ke': {
-        ...createLoaderConfig('techhub.christech.co.ke', 'Techhub', {
+    'tradehub.christech.co.ke': {
+        ...createLoaderConfig('tradehub.christech.co.ke', 'Tradehub', {
             primaryColor: '#3b82f6',
             secondaryColor: '#8b5cf6',
             accentColor: '#ffffff',
