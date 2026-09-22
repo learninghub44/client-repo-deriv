@@ -64,6 +64,11 @@ const router = createBrowserRouter(
         >
             {/* All child routes will be passed as children to Layout */}
             <Route index element={<AppRoot />} />
+            {/* OAuth redirect target — must NOT fall through to the catch-all below,
+                or the Navigate there wipes ?code=&state= before useOAuthCallback (in App())
+                can read them. AppRoot renders the same as '/'; the top-level OAuth handling
+                in App() processes the callback regardless of path. */}
+            <Route path='callback' element={<AppRoot />} />
             <Route path='competition' element={<CompetitionRoute />} />
             <Route path='admin/competitions' element={<CompetitionAdminRoute />} />
             {/* Catch-all: redirect any unknown path back to root (hash-based tab navigation handles the rest) */}
