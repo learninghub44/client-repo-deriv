@@ -326,8 +326,8 @@ export const getDomainRedirectUrl = (
 export const getDomainConfig = (activeHostname = window.location.hostname): DomainConfig => {
     const hostname = normalizeHostname(activeHostname);
     return {
-        clientId: '34t5yz3wDsbeZf9IAbFNV',
-        appId: '34t5yz3wDsbeZf9IAbFNV',
+        clientId: '34t6D3VOm0Kv3LadCeJjL',
+        appId: '34t6D3VOm0Kv3LadCeJjL',
         redirectUri: 'https://tradehub.christech.co.ke/callback',
         botsFolder: DEFAULT_BOTS_FOLDER,
         canonicalHost: hostname,
