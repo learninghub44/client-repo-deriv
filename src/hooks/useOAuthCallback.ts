@@ -111,6 +111,13 @@ export const useOAuthCallback = (): OAuthCallbackResult => {
             url.searchParams.delete(`cur${i}`);
             i++;
         }
+        // The OAuth redirect_uri always lands on /callback. Once processing is done,
+        // send the user back to '/' — otherwise the path stays stuck at /callback for
+        // the rest of the session, and Layout's isCallbackPage check keeps the header
+        // (balance bar) and footer hidden even though login succeeded.
+        if (url.pathname === '/callback') {
+            url.pathname = '/';
+        }
         window.history.replaceState({}, '', url.toString());
     }, []);
 
