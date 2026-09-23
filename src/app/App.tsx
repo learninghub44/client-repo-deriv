@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import React from 'react';
 import { createBrowserRouter, createRoutesFromElements, Navigate, Route, RouterProvider } from 'react-router-dom';
 import ChunkLoader from '@/components/loader/chunk-loader';
+import Audio from '@/components/audio/audio';
 import { isDomainFeatureEnabled } from '@/components/shared';
 import LocalStorageSyncWrapper from '@/components/localStorage-sync-wrapper';
 import RoutePromptDialog from '@/components/route-prompt-dialog';
@@ -179,6 +180,7 @@ function App() {
 
     return (
         <ErrorBoundary>
+            <Audio />
             <RouterProvider router={router} />
         </ErrorBoundary>
     );
