@@ -151,6 +151,21 @@ export default class JournalStore {
     playAudio = (sound: string) => {
         if (sound !== config().lists.NOTIFICATION_SOUND[0][1]) {
             const audio = document.getElementById(sound) as HTMLAudioElement | null;
+            // TEMPORARY DIAGNOSTIC — remove once trade-profit/trade-loss sound issue is confirmed fixed.
+            if (sound === 'trade-profit' || sound === 'trade-loss') {
+                import('../utils/debug-toast').then(({ showDebugToast }) => {
+                    if (!audio) {
+                        showDebugToast(`🔇 #${sound} not found in DOM`);
+                        return;
+                    }
+                    showDebugToast(`🔊 playing ${sound} (src: ${audio.currentSrc || audio.src})`);
+                    audio
+                        .play()
+                        .then(() => showDebugToast(`✅ ${sound} played OK`))
+                        .catch(err => showDebugToast(`❌ ${sound} failed: ${err?.name}: ${err?.message}`));
+                });
+                return;
+            }
             if (audio) {
                 audio.play().catch(() => {});
             }
