@@ -118,6 +118,12 @@ export default class TransactionsStore {
             ].filter(Boolean);
 
             journal.pushMessage(settlement_parts.join(' | '), MessageTypes.NOTIFY, 'journal__text--analysis');
+
+            // Play a distinct sound for a win vs a loss. Covers every trading surface (manual
+            // trading, auto-trades bots, scanner, accumulators) since they all funnel completed
+            // contracts through this method.
+            const is_win = contract_status === 'won' || (contract_status !== 'lost' && profit > 0);
+            journal.playAudio(is_win ? 'trade-profit' : 'trade-loss');
         }
     }
 
